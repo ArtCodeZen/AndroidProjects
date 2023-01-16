@@ -3,6 +3,8 @@ package com.example.test_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,8 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView t = (TextView) findViewById(R.id.brands);
-        t.setText("Hello my friend");
 
+    }
+    public void onClickFindBeer(View view){
+        Spinner s = (Spinner) findViewById(R.id.spinner);
+        TextView t = (TextView) findViewById(R.id.brands);
+        t.setText(s.getSelectedItem().toString());
     }
 }

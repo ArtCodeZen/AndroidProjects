@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">test_app</string>
+    <string name="my_info">Usando strings</string>
+    <string-array name="nomes_aleatorios">
+        <item>maira</item>
+        <item>jaymes</item>
+        <item>miriam</item>
+    </string-array>
+    <string-array name="nomes_objetos">
+        <item>caneta</item>
+        <item>vela</item>
+        <item>teclado</item>
+
+    </string-array>
 </resources>
