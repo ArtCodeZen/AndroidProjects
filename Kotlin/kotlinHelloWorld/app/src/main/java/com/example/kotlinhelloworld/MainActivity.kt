@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val text: TextView = findViewById(R.id.meu_te)
-        // toast
+        // toast show
         val duration = Toast.LENGTH_SHORT
         val toast = Toast.makeText(applicationContext, text.text, duration)
         toast.show()
