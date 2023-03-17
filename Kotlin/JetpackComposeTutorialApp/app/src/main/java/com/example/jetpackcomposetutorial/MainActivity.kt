@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 
 
@@ -12,10 +13,13 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -32,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    myTask()
                 }
             }
         }
@@ -76,6 +80,38 @@ fun myText(){
 
 }
 @Composable
+fun myTask(){
+    val image = painterResource(R.drawable.ic_task_completed)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .fillMaxHeight()
+            .background(color = Color.White),
+        horizontalAlignment = Alignment.CenterHorizontally
+        , verticalArrangement = Arrangement.Center
+    ){
+        Image(
+            painter = image,
+            contentDescription = null,
+            contentScale = ContentScale.Fit,
+            modifier = Modifier.height(100.dp)
+
+        )
+        Text(
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp),
+            text = stringResource(R.string.completed),
+            fontWeight = FontWeight.Bold,
+            color = Color.Black
+        )
+        Text(
+            text = stringResource(R.string.niceWork),
+            color = Color.Black
+        )
+
+    }
+}
+@Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
@@ -84,7 +120,7 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     JetPackComposeTutorialTheme {
-
-        myText()
+        //myText()
+        myTask()
     }
 }
