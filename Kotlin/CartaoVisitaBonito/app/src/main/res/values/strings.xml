@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">CartaoDeVisita</string>
+    <string name="app_name">CartaoVisitaBonito</string>
     <string name="usuario_nome">ArtCodeZen</string>
     <string name="usuario_information_about">Android Developer</string>
-
-
 </resources>

@@ -61,15 +61,15 @@ fun Card(){
     ){
         MyImage()
         Text(
-            text = stringResource(id = R.string.user_name),
+            text = stringResource(id= R.string.usuario_nome),
             color = Color.White,
             fontSize = 40.sp
         )
         Text(
-            text = stringResource(id = R.string.user_information_about),
-            color = Color.Green,
-            fontSize = 20.sp
-            )
+            text = stringResource(id= R.string.usuario_information_about),
+            color = Color.White,
+            fontSize = 40.sp
+        )
     }
 }
 @Composable
