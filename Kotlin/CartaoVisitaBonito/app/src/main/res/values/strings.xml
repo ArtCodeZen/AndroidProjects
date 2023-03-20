@@ -2,4 +2,8 @@
     <string name="app_name">CartaoVisitaBonito</string>
     <string name="usuario_nome">ArtCodeZen</string>
     <string name="usuario_information_about">Android Developer</string>
+
+    <string name="usuario_tel">+55110000-0000</string>
+    <string name="usuario_email">artcodezen@test.com</string>
+    <string name="usuario_social">social.test</string>
 </resources>
