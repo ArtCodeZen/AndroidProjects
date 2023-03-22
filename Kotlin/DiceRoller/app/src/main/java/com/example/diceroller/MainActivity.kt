@@ -16,8 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.diceroller.ui.theme.DiceRollerTheme
-import kotlinx.coroutines.awaitCancellation
-import kotlinx.coroutines.delay
+
 
 
 class MainActivity : ComponentActivity() {
@@ -52,8 +51,6 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier
     .background(color = Color.White)
 ){
     var result by remember {mutableStateOf(1)}
-
-
     val imageResource = when(result){
         1 -> R.drawable.dice_1
         2 -> R.drawable.dice_2
