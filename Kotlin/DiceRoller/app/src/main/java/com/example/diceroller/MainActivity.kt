@@ -16,6 +16,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.diceroller.ui.theme.DiceRollerTheme
+import kotlinx.coroutines.awaitCancellation
+import kotlinx.coroutines.delay
 
 
 class MainActivity : ComponentActivity() {
@@ -42,15 +44,16 @@ fun DiceRollerApp(){
 
     }
 }
+
 @Composable
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier
     .fillMaxSize()
     .fillMaxHeight()
     .background(color = Color.White)
 ){
-    var result by remember {
-        mutableStateOf(1)
-    }
+    var result by remember {mutableStateOf(1)}
+
+
     val imageResource = when(result){
         1 -> R.drawable.dice_1
         2 -> R.drawable.dice_2
@@ -60,7 +63,8 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier
         else -> R.drawable.dice_6
     }
     // expressão lambda
-    val funcaoClicarRandom = {
+
+    val rodar = {
         result = (1..6).random()
     }
     Column (
@@ -73,12 +77,12 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier
             painter = painterResource(id = imageResource),
             contentDescription = "1",
             modifier = Modifier
-                .clickable {funcaoClicarRandom()}
+                .clickable {rodar()}
         )
         Button(
 
             onClick = {
-                funcaoClicarRandom()},
+                rodar()},
             colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue)
 
         ) {
