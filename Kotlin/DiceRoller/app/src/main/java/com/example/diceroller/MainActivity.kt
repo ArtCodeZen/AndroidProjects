@@ -63,16 +63,19 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier
     LaunchedEffect(changing) {
         if(changing)
         {
-            repeat(4){
+            var increaseSpeedMs: Long = 200
+            val nTimes = 20
+            repeat(nTimes){
                 while(true){
                     var cacheResult = (1..6).random()
                     if(result != cacheResult){
                         result = cacheResult
+                        increaseSpeedMs -= increaseSpeedMs / nTimes
                         break
                     }
 
                 }
-                delay(200)
+                delay(increaseSpeedMs)
 
             }
             changing = false // reset
