@@ -100,7 +100,7 @@ fun RoundTheTipRow(
 
             checked = roundUp,
             onCheckedChange = onRoundUpChanged,
-            colors = SwitchDefaults.colors(uncheckedThumbColor = Color.Red,
+            colors = SwitchDefaults.colors(uncheckedThumbColor = Color.Blue,
                 checkedThumbColor = Color.Green)
         )
     }
