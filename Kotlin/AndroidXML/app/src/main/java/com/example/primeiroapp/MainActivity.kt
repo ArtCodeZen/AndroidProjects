@@ -1,6 +1,8 @@
 package com.example.primeiroapp
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,4 +19,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+    fun clique(view: View){
+        println("foi criado!")
+        val toast: Toast = Toast.makeText(this, "foi clicado", Toast.LENGTH_SHORT)
+        toast.show()
+    }
+
+
 }
