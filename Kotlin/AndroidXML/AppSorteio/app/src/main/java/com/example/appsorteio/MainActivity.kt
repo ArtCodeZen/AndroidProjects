@@ -25,5 +25,7 @@ class MainActivity : AppCompatActivity() {
         val textoResultado = findViewById<TextView>(R.id.text_resultado) // encontre um item de interface por um identificador
         val numero = Random().nextInt(11)  // 0 ... 10
         textoResultado.text = "Numero resultado:$numero"
+        val user = Usuario(this)
+        user.logar()
     }
 }
