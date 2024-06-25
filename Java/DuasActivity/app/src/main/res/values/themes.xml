@@ -1,19 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.DuasActivity" parent="Theme.Material3.DayNight">
+    <style name="Base.Theme.DuasActivity" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <!--Cor primária-->
         <item name="colorPrimary">@color/primaria</item>
         <item name="colorPrimaryVariant">@color/primaria_variante</item>
-        <item name="colorOnPrimary">@color/texto_primaria</item>
+        <item name="colorOnPrimary">@color/item_primaria</item>
         <!--Cor secundária -->
         <item name="colorSecondary">@color/secundaria</item>
         <item name="colorSecondaryVariant">@color/secundaria_variante</item>
-        <item name="colorOnSecondary">@color/secundaria</item>
+        <item name="colorOnSecondary">@color/item_secundaria</item>
         <!--Cor da barra de status-->
-        <item name="android:statusBarColor">@color/primaria</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:actionBarStyle">?attr/colorPrimary</item>
 
+
+
+        <!--Cor do tema-->
+        <item name="android:windowBackground">@color/fundo</item>
 
      </style>
 

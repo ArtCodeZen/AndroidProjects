@@ -5,11 +5,16 @@
 
     <!--Cores customizadas    -->
     <color name="primaria">#002AFF</color>
-    <color name="primaria_variante">#011163</color>
-    <color name="texto_primaria">#FFFFFFFF</color>
+    <color name="primaria_variante">#011889</color>
+    <color name="item_primaria">#FFFFFFFF</color>
 
-    <color name="secundaria">#FF003B</color>
+    <color name="secundaria">#E9DE07</color>
     <color name="secundaria_variante">#670018</color>
-    <color name="texto_secundaria">#000000</color>
+    <color name="item_secundaria">#000000</color>
+
+    <!--Cores secundárias-->
+    <color name="secundario">#8BC34A</color>
+    <color name="fundo">#767776</color>
+
 
 </resources>
