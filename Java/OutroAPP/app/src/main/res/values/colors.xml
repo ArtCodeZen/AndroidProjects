@@ -2,8 +2,4 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <!--Cores customizadas    -->
-    <color name="red_color">#FF0000</color>
-
 </resources>
