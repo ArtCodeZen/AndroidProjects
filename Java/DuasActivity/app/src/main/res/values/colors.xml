@@ -16,5 +16,15 @@
     <color name="secundario">#8BC34A</color>
     <color name="fundo">#767776</color>
 
+    <!-- Cores escuras-->
+    <!--Cores customizadas    -->
+    <color name="primaria_escura">#EA4BEF</color>
+    <color name="primaria_variante_escura">#48517D</color>
+    <color name="item_primaria_escura">#FFFFFFFF</color>
+
+    <color name="secundaria_escura">#EF4040</color>
+    <color name="secundaria_variante_escura">#670018</color>
+    <color name="item_secundaria_escura">#000000</color>
+
 
 </resources>

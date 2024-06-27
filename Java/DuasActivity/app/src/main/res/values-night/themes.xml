@@ -3,5 +3,12 @@
     <style name="Base.Theme.DuasActivity" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primaria_escura</item>
+        <item name="colorPrimaryVariant">@color/primaria_variante_escura</item>
+        <item name="colorOnPrimary">@color/item_primaria_escura</item>
+        <!--Cor secundária -->
+        <item name="colorSecondary">@color/secundaria_escura</item>
+        <item name="colorSecondaryVariant">@color/secundaria_variante_escura</item>
+        <item name="colorOnSecondary">@color/item_secundaria_escura</item>
     </style>
 </resources>

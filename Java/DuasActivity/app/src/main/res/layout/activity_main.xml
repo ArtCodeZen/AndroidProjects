@@ -62,7 +62,9 @@
         android:inputType="text"
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
