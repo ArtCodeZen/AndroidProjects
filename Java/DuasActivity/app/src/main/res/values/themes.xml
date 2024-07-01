@@ -18,7 +18,7 @@
 
 
         <!--Cor do tema-->
-        <item name="android:windowBackground">@color/fundo</item>
+        <item name="android:windowBackground">@color/white</item>
 
      </style>
 
