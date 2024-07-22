@@ -21,6 +21,8 @@
         <item name="android:windowBackground">@color/white</item>
 
      </style>
-
+    <style name="CaixaDeTexto" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/secundaria_escura</item>
+    </style>
     <style name="Theme.DuasActivity" parent="Base.Theme.DuasActivity" />
 </resources>
