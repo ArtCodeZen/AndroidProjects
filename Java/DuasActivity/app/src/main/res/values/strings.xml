@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">DuasActivity</string>
     <string name="botao_jogar">Jogue</string>
+    <string name="botao_clique">Salvar</string>
 
     <string name="help_text">Ex: teste@teste.com</string>
     <string name="hint_txt">seu email</string>
+
 
 </resources>

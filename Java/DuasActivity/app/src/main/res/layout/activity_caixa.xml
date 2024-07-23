@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="executar"
     tools:context=".CaixaActivity">
 
     <TextView
@@ -34,6 +35,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
+        android:id="@+id/textInputLayout"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -52,4 +54,14 @@
             android:hint="@string/hint_txt"
             android:maxLength="30" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/botaoSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="@string/botao_clique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
