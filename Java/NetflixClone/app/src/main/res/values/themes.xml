@@ -3,6 +3,21 @@
     <style name="Base.Theme.NetflixClone" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--Cor primária-->
+        <item name="colorPrimary">@color/primaria</item>
+        <item name="colorPrimaryVariant">@color/primaria_variacao</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <!--Cor secundária -->
+        <item name="colorSecondary">@color/secundaria</item>
+        <item name="colorSecondaryVariant">#018786</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--Cor da barra de status-->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:actionBarStyle">?attr/colorPrimary</item>
+
+        <!--Customizando interface netflix-->
+        <item name="android:windowBackground">@color/fundo</item>
+
     </style>
 
     <style name="Theme.NetflixClone" parent="Base.Theme.NetflixClone" />

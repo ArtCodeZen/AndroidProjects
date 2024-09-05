@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- cores normais  -->
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="preto">#000000</color>
+
+
+    <!-- cores do projeto-->
+    <color name="primaria">#E70001</color>
+    <color name="primaria_variacao">#AA0407</color>
+    <color name="secundaria">#F70000</color>
+    <color name="fundo">#171417</color>
+    <color name="menu_navegacao">@color/branco </color>
+
+
 </resources>
