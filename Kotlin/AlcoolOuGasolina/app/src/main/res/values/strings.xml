@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AlcoolOuGasolina</string>
+    <string name="info">Saiba a melhor opção para abastecer o seu carro!</string>
+    <string name="info_resultado">Resultado</string>
+
+    <!-- Texto do hint    -->
+    <string name="hint_preco_alcool">Digite o preço do álcool</string>
+    <string name="hint_preco_gasolina">Digite o preço da gasolina</string>
+
+</resources>
