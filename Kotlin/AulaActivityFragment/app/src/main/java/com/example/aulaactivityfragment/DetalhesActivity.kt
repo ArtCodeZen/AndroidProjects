@@ -1,5 +1,6 @@
 package com.example.aulaactivityfragment
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -22,17 +23,21 @@ class DetalhesActivity : AppCompatActivity() {
         }
         // adicionar listener no botão fechar
         buttonFechar = findViewById(R.id.button_fechar)
-        val bundle = intent.extras
-//        val filme = bundle?.getString("filme")
-        val filme = bundle?.getSerializable("filme") as Filme
+        val bundle = intent.extras   // variável do tipo bundle que recebe os dados da intent
+        var filme: Filme? = null     // variável do tipo filme
+        // if para testar a versão do android
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+            filme = bundle?.getSerializable("filme", Filme::class.java)
+        }else
+            filme = bundle?.getSerializable("filme") as Filme      // forma antiga
 
-        Toast.makeText(this, "Nome do filme: ${filme.descricao}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Nome do filme: ${filme?.descricao}", Toast.LENGTH_SHORT).show()
 
         buttonFechar.setOnClickListener {
-
             Toast.makeText(this, "Botão fechar clicado", Toast.LENGTH_SHORT).show()
             finish()
         }
+
 
     }
 
