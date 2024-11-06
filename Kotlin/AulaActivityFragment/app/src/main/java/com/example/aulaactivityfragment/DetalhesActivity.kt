@@ -22,7 +22,14 @@ class DetalhesActivity : AppCompatActivity() {
         }
         // adicionar listener no botão fechar
         buttonFechar = findViewById(R.id.button_fechar)
+        val bundle = intent.extras
+//        val filme = bundle?.getString("filme")
+        val filme = bundle?.getSerializable("filme") as Filme
+
+        Toast.makeText(this, "Nome do filme: ${filme.descricao}", Toast.LENGTH_SHORT).show()
+
         buttonFechar.setOnClickListener {
+
             Toast.makeText(this, "Botão fechar clicado", Toast.LENGTH_SHORT).show()
             finish()
         }
