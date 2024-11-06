@@ -27,10 +27,11 @@ class DetalhesActivity : AppCompatActivity() {
         var filme: Filme? = null     // variável do tipo filme
         // if para testar a versão do android
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
-            filme = bundle?.getSerializable("filme", Filme::class.java)
+            //filme = bundle?.getSerializable("filme", Filme::class.java)
+            filme = bundle?.getParcelable("filme", Filme::class.java)
         }else
-            filme = bundle?.getSerializable("filme") as Filme      // forma antiga
-
+            //filme = bundle?.getSerializable("filme") as Filme      // forma antigafilme = bundle?.getSerializable("filme") as Filme      // forma antiga
+            filme = bundle?.getParcelable("filme")
         Toast.makeText(this, "Nome do filme: ${filme?.descricao}", Toast.LENGTH_SHORT).show()
 
         buttonFechar.setOnClickListener {
