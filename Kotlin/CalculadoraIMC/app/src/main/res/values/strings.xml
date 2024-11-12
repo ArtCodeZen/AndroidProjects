@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CalculadoraIMC</string>
+    <string name="hint_peso">Digite o seu peso</string>
+    <string name="hint_altura">Digite a sual altura</string>
+    <string name="texto_info">Digite o . para casas decimais</string>
+
+    <string name="bnt_calcular_txt">Calcular IMC</string>
+<!--    Informações activity resultado-->
+    <string name="peso_info">Peso informado</string>
+    <string name="altura_info">Altura informado</string>
+    <string name="diagnostico_info">Diagnóstico</string>
+<!-- Info alertas-->
+    <string name="inserirDados_alert">Insira o peso e altura!!</string>
+</resources>
