@@ -66,3 +66,26 @@ data class Filme(
       filme = bundle?.getParcelable("filme")
    Toast.makeText(this, "Nome do filme: ${filme?.descricao}", Toast.LENGTH_SHORT).show()
 ```
+
+
+# Fragments por código
+* Criar fragments para o android
+* Usado junto com as activity
+
+> Fragment classe
+
+```kotlin
+class ConversasFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_conversas, container, false)
+    }
+}
+
+```
+
+> Criar xml do fragment; Botão esquerdo do mouse -> NEW -> DRAWABLE RESOURCE FILE
+
