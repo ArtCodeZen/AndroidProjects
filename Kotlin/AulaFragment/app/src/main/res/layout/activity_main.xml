@@ -22,7 +22,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_conversas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_conversas"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_chamadas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_chamadas"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
+        android:id="@+id/fragment_conteudo"
         android:name="com.example.aulafragment.Fragment.ConversasFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

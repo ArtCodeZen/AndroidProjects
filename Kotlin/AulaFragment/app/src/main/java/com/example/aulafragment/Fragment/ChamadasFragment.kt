@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.aulafragment.R
 
-class ConversasFragment : Fragment() {
+class ChamadasFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_conversas, container, false)
-
+        return inflater.inflate(R.layout.fragment_chamadas, container, false)
     }
 }
