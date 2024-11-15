@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aulafragment.Fragment.ChamadasFragment
@@ -26,32 +25,33 @@ class MainActivity : AppCompatActivity() {
         btnMercado = findViewById(R.id.btn_mercado)
         btnChamadas = findViewById(R.id.btn_chamadas)
 
+        // adicionar on click listener
         btnMercado.setOnClickListener {
             val conversasFragment = ConversasFragment()
-            val bundle = bundleOf(
-                "categoria" to "Mercado",
-                "usuario" to "artcodezen"
-            )
-
+            val bundle = Bundle()
+            bundle.putString("categoria", "Mercado")
             conversasFragment.arguments = bundle
+
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_conteudo, ConversasFragment())
+                .replace(R.id.fragment_conteudo, conversasFragment)
                 .commit()
         }
+        // adicionar on click listener
         btnChamadas.setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_conteudo, ChamadasFragment())
                 .commit()
         }
+        /*
         // primeira opçãp
-//        val fragmentManager = supportFragmentManager.beginTransaction()
-//        fragmentManager.add(R.id.fragment_conteudo, ConversasFragment())
-//        fragmentManager.commit()
+        val fragmentManager = supportFragmentManager.beginTransaction()
+        fragmentManager.add(R.id.fragment_conteudo, ConversasFragment())
+        fragmentManager.commit()
 
         // segunda opção
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_conteudo, ConversasFragment())
             .commit()
-
+        */
     }
 }

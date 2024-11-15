@@ -50,14 +50,17 @@ class ConversasFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i("ciclo_vida", "onCreateConversas")
-        categoria = arguments?.getString("categoria")
+        categoria = arguments?.getString("categoria").toString()
+        Log.i("categoria", categoria.toString())
 
 
 
 }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.i("ciclo_vida", "onViewCreatedConversas")
+
         super.onViewCreated(view, savedInstanceState)
+        Log.i("ciclo_vida", "onViewCreatedConversas")
+
     }
     override fun onStart() {
         Log.i("ciclo_vida", "onStartConversas")
