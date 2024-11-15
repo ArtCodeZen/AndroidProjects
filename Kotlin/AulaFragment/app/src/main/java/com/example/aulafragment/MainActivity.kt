@@ -6,6 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.example.aulafragment.Fragment.ChamadasFragment
 import com.example.aulafragment.Fragment.ConversasFragment
 
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         // adicionar on click listener
         btnMercado.setOnClickListener {
+            /* // forma sem o ktx
             val conversasFragment = ConversasFragment()
             val bundle = Bundle()
             bundle.putString("categoria", "Mercado")
@@ -35,6 +38,16 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_conteudo, conversasFragment)
                 .commit()
+
+             */
+            // FORMA usando o KTX jetpack
+            val bundle = Bundle()
+            bundle.putString("categoria", "Mercado")
+            supportFragmentManager.commit {
+                replace<ConversasFragment>(
+                    R.id.fragment_conteudo,
+                    args = bundle)
+            }
         }
         // adicionar on click listener
         btnChamadas.setOnClickListener {
