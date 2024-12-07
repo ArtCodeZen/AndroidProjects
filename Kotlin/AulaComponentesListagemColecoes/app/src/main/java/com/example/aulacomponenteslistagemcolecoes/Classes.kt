@@ -11,12 +11,22 @@ class Motorista(val nome: String){
         fun exibirDadosCaminhao() = println("Caminhao: $nomeCaminhao")
     }
 }
+// classe de Dados
 
+data class Pergunta(var pergunta: String, var resposta: Int){
+    fun exibir() = println("Exibir")
+}
 fun main(){
-    val caminhao = Motorista("Joao")
+
+    val pergunta1 = Pergunta("Qual a cor do cavalo branco de Napoleao?", 1)
+    val pergunta2 = Pergunta("Qual a cor do cavalo branco de Napoleao?", 1)
+    // a saída é true pois os dados inseridos são iguais!
+    println("Os dados são iguais? ${pergunta1 == pergunta2}")
+
+    /*val caminhao = Motorista("Joao")
     caminhao.exibeNome()
     caminhao.Caminhao("Caminhao 1").exibirDadosCaminhao()
-    
+*/
  /*   val motorista = Motorista("Joao")
     motorista.exibeNome()*/
 
