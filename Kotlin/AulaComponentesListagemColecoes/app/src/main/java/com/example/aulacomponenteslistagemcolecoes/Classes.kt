@@ -16,6 +16,15 @@ class Motorista(val nome: String){
 data class Pergunta(var pergunta: String, var resposta: Int){
     fun exibir() = println("Exibir")
 }
+
+class User(){
+    fun telefones(vararg telefones: String){
+        for(telefone in telefones){
+            println(telefone)
+        }
+
+    }
+}
 fun main(){
 
     val pergunta1 = Pergunta("Qual a cor do cavalo branco de Napoleao?", 1)
@@ -28,6 +37,13 @@ fun main(){
     val p = pergunta1.pergunta
     val r = pergunta1.resposta
     println("Pergunta: $pergunta, Resposta: $resposta")
+
+    var pessoa = Pessoa()
+    pessoa.salvarTelefone(11, "119999-9999", "118888-8888", "1177777777")
+
+    var user = User()
+    user.telefones("119999-9999", "118888-8888", "1177777777")
+
 
 
 
