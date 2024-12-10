@@ -21,7 +21,15 @@ fun main(){
     val pergunta1 = Pergunta("Qual a cor do cavalo branco de Napoleao?", 1)
     val pergunta2 = Pergunta("Qual a cor do cavalo branco de Napoleao?", 1)
     // a saída é true pois os dados inseridos são iguais!
-    println("Os dados são iguais? ${pergunta1 == pergunta2}")
+    // println("Os dados são iguais? ${pergunta1 == pergunta2}")
+
+    // Exemplo de destructuring ou desestruturação
+    val (pergunta, resposta) = pergunta1
+    val p = pergunta1.pergunta
+    val r = pergunta1.resposta
+    println("Pergunta: $pergunta, Resposta: $resposta")
+
+
 
     /*val caminhao = Motorista("Joao")
     caminhao.exibeNome()
