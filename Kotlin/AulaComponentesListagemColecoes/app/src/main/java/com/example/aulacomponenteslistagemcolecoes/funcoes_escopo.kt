@@ -55,4 +55,9 @@ fun main(){
     alertaMensagem.configurarDescricao("Você tem certeza que deseja continuar?")
     alertaMensagem.configuraCancelar()
     alertaMensagem.configuraConfirmar()
+
+
+    var list = listOf("item1", "item2")
+    list.map {it.uppercase()}
+        .also { println(it) }
 }
