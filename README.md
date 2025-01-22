@@ -89,3 +89,7 @@ class ConversasFragment : Fragment() {
 
 > Criar xml do fragment; Botão esquerdo do mouse -> NEW -> DRAWABLE RESOURCE FILE
 
+# ANOTAÇÕES E LEMBRETES
+
+* O listView foi depreciado devido ao alto consumo de memória, pois sua lista era carregado por completo ocupando espaço desnecessário. 
+* Foi criado o RecyclerView - sendo corrigido o problema do consumo de memória referente a listView! 
