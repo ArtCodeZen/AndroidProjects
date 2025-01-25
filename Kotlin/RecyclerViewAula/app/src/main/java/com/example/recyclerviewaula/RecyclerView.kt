@@ -28,11 +28,14 @@ class RecyclerView : AppCompatActivity() {
                 Mensagem("naaa ", "Olha só", "22:00"),
                 Mensagem("E ai", "meu amigo", "13:22"),
                 Mensagem("E ai", "meu amigo", "13:22"),
-                Mensagem("E ai", "meu amigo", "13:22",)
+                Mensagem("E ai", "meu amigo", "13:22"),
+                Mensagem("Meu jovem", "lll", "13:55"),
+                Mensagem("Fala brother", "sei lá", "13:00"),
         )
         rvLista = findViewById(R.id.rv_lista)
         // adapter só usa o adapter
         rvLista.adapter = MensagemAdapter(lista) //
-        rvLista.layoutManager = LinearLayoutManager(this)
+        // LinearLayoutManager (XML e Código)
+        rvLista.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
     }
 }
