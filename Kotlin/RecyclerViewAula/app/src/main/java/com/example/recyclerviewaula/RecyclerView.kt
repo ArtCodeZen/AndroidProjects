@@ -36,6 +36,6 @@ class RecyclerView : AppCompatActivity() {
         // adapter só usa o adapter
         rvLista.adapter = MensagemAdapter(lista) //
         // LinearLayoutManager (XML e Código)
-        rvLista.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+       // rvLista.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
     }
 }
