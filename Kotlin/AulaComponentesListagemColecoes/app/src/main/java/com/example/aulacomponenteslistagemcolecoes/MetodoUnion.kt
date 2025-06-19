@@ -10,6 +10,7 @@ fun main(){
         println(it)
 
     }
+    println("--------")
     listaJuntadaPlus = listaJuntadaPlus.minus(listaExclusao)
     listaJuntadaPlus.forEach{
         item -> println(item)
