@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "hello_world"
+rootProject.name = "RockPaperScissors"
 include(":app")
-include(":lib")
+ 
