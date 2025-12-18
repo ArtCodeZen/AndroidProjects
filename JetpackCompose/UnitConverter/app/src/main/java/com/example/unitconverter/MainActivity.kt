@@ -10,7 +10,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -48,12 +51,20 @@ fun UnitConverter(modifier: Modifier = Modifier){
                 Text("Clique aqui")
             }
             Box(){
+                Button(onClick = {}){
+                    Text("Select")
+                    Icon(Icons.Default.ArrowDropDown,
+                        contentDescription = "Arrow Down")
+
+                }
+            }
+            Box(){
 
             }
-        }
+        } // row
 
 
-    }
+    } // column
 }
 
 @Preview(showBackground = true)
