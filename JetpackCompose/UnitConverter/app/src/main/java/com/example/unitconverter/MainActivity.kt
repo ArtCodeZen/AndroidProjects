@@ -1,5 +1,6 @@
 package com.example.unitconverter
 
+import android.R
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -25,9 +26,14 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -52,12 +58,25 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun UnitConverter(modifier: Modifier){
+    var inputValue by remember { mutableStateOf("") }
+    var outputValue by remember { mutableStateOf("") }
+    var inputUnit by remember { mutableStateOf("Centimeters") }
+    var outputUnit by remember { mutableStateOf("Meters") }
+    var iExpanded by remember { mutableStateOf(false) }
+    var oExpanded by remember { mutableStateOf(false) }
+    val conversionFactor by remember { mutableStateOf(0.01) }
+
     Column(modifier,
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally){
         Text("Unit Converter", modifier= Modifier.border(BorderStroke(2.dp, Color.Black)).padding(2.dp))
         Spacer(modifier = Modifier.height(30.dp))       // espaçamento
-        OutlinedTextField(value = "Digite algo", onValueChange = {/* here goes what should happen, when the Value of our OutlinedTextField changes}*/})
+
+        OutlinedTextField(colors = OutlinedTextFieldDefaults.colors(focusedTextColor = Color.Black,
+            focusedBorderColor = Color.Black,
+            unfocusedTextColor = Color.Red),value = inputValue, onValueChange = {
+            inputValue = it})
+
         Spacer(modifier = Modifier.height(30.dp))       // espaçamento
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)){
             val context = LocalContext.current
@@ -78,7 +97,7 @@ fun UnitConverter(modifier: Modifier){
 
                 }
 
-                DropdownMenu(expanded = true, onDismissRequest = {}, offset = DpOffset(0.dp, 20.dp) ) {
+                DropdownMenu(expanded = false, onDismissRequest = {}, offset = DpOffset(0.dp, 20.dp) ) {
                     DropdownMenuItem(
                         text = {Text("Centimeters")},
                         onClick = {})
