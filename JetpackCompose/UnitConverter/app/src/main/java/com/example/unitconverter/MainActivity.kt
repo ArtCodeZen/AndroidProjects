@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -80,24 +81,19 @@ fun UnitConverter(modifier: Modifier){
         Spacer(modifier = Modifier.height(30.dp))       // espaçamento
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)){
             val context = LocalContext.current
-
-            Button(onClick = { Toast.
-                makeText(context,
-                    "Button Clicked",
-                    Toast.LENGTH_SHORT).show()}){
-                Text("Clique aqui")
-            }
-
             Box(){
 
-                Button(onClick = {}){
+                Button(onClick = {
+                    iExpanded = true
+
+                }){
                     Text("Select")
                     Icon(Icons.Default.ArrowDropDown,
                         contentDescription = "Arrow Down")
 
                 }
 
-                DropdownMenu(expanded = false, onDismissRequest = {}, offset = DpOffset(0.dp, 20.dp) ) {
+                DropdownMenu(expanded = iExpanded, onDismissRequest = {  iExpanded = false}, offset = DpOffset(0.dp, 20.dp) ) {
                     DropdownMenuItem(
                         text = {Text("Centimeters")},
                         onClick = {})
@@ -111,13 +107,17 @@ fun UnitConverter(modifier: Modifier){
             }
 
             Box(){
-                Button(onClick = {}){
-                    Text("Select1")
+                Button(onClick = {
+                    oExpanded = true
+
+                }){
+                    Text("Select")
                     Icon(Icons.Default.ArrowDropDown,
                         contentDescription = "Arrow Down")
 
                 }
-                DropdownMenu(expanded = false, onDismissRequest = {}) {
+
+                DropdownMenu(expanded = oExpanded, onDismissRequest = {  oExpanded = false}, offset = DpOffset(0.dp, 20.dp) ) {
                     DropdownMenuItem(
                         text = {Text("Centimeters")},
                         onClick = {})
@@ -130,6 +130,8 @@ fun UnitConverter(modifier: Modifier){
                 }
             }
         } // row
+        Spacer(modifier = Modifier.height(30.dp))       // espaçamento)
+        Text("Result: $outputValue" )
 
 
     } // column
