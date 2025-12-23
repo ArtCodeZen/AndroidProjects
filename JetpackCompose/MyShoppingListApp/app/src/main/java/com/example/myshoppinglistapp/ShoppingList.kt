@@ -46,11 +46,17 @@ data class ShoppingItem(
 
 @Composable
 fun ShoppingListApp(modifier : Modifier) {
+    var fStart  by remember { mutableStateOf(true) }
     var sItems by remember { mutableStateOf(listOf<ShoppingItem>()) }
     var showDialog by remember { mutableStateOf(false) }
     var itemName by remember { mutableStateOf("") }
     var itemQuantity by remember { mutableStateOf("") }
-
+    if(fStart) {
+        // first Start
+        sItems += ShoppingItem(1, "Apples", 5)
+        sItems += ShoppingItem(2, "Bananas", 3)
+        fStart = false
+    }
     Column(
         modifier = modifier
             .fillMaxSize(),
@@ -202,7 +208,9 @@ fun ShoppingListItem(
             .fillMaxWidth()
             .border(
                 border = BorderStroke(2.dp, Color(0xFF018786)),
-                shape = RoundedCornerShape(8.dp))
+                shape = RoundedCornerShape(8.dp)),
+        //horizontalArrangement = Arrangement.SpaceBetween
+
     ) {
 
         Text(text = "Name: ${item.name}", modifier = Modifier.padding(8.dp))
