@@ -58,7 +58,8 @@ fun ShoppingListApp(modifier : Modifier){
                       },
             modifier = Modifier.align(Alignment.CenterHorizontally)
         ){
-            Text(text = "Add Item")
+            val doubleNumber: (Int) -> Int = {it * 2}
+            Text(doubleNumber(2).toString())
         }
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(16.dp),
