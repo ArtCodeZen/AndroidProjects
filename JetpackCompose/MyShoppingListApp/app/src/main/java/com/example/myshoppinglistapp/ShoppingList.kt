@@ -1,5 +1,6 @@
 package com.example.myshoppinglistapp
 
+import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -100,6 +101,7 @@ fun ShoppingListApp(modifier : Modifier) {
                         sItems = sItems - item
                     })
                 }
+                Log.d("SD", "Item entered!")
             } // items
         }
         if (showDialog) {
@@ -208,11 +210,11 @@ fun ShoppingListItem(
             .fillMaxWidth()
             .border(
                 border = BorderStroke(2.dp, Color(0xFF018786)),
-                shape = RoundedCornerShape(8.dp)),
-        //horizontalArrangement = Arrangement.SpaceBetween
+                shape = RoundedCornerShape(2.dp)),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
 
     ) {
-
         Text(text = "Name: ${item.name}", modifier = Modifier.padding(8.dp))
         Text(text = "qty: ${item.quantity}", modifier = Modifier.padding(8.dp))
         Row(modifier = Modifier.padding(8.dp)) {
